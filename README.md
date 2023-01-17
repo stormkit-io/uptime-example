@@ -2,45 +2,11 @@
 
 This open source project is designed to monitor given URLs and send notifications if the URL does not return a 200 status code. It is built using the [Stormkit](https://stormkit.io/) and [Supabase](https://supabase.com/) and can be easily integrated into existing systems to provide real-time monitoring and alerting of website uptime. With its user-friendly interface, setting up and configuring monitoring for multiple URLs is a breeze. Whether you're a developer looking to monitor your own projects or a business owner looking to keep an eye on your website's uptime, this project is a valuable tool for ensuring your online presence is always up and running.
 
+![image](https://user-images.githubusercontent.com/2489876/213029605-3d641f78-cfc1-4212-843b-188cd645df9d.png)
+
+
 ## Available Scripts
 
-In the project directory, you can run:
+Please check package.json
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
