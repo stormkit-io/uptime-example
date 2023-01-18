@@ -11,13 +11,12 @@ const main = async (req: http.IncomingMessage, res: http.ServerResponse) => {
   }
 
   if (req.method === "POST") {
-    const body = await getBodyFromRequest(req);
+    const body = await getBodyFromRequest(req) as { url: string, status: number };
 
     if (!checkUrl(body.url)) {
       res.end("Invalid request body");
       return;
     }
-
     const testUrl: Response = await fetch(body.url);
     notifyListeners(testUrl);
     const { error } = await supabase
@@ -43,6 +42,7 @@ const notifyListeners = (res: Response) => {
       .select("value")
       .eq("key", "notifications")
       .then(({ data }) => {
+        // @ts-ignore
         const config = data[0].value;
         fetch(config.discordWebhook, {
           method: "POST",
@@ -71,6 +71,7 @@ const checkUrl = (string: string | URL): boolean => {
 const getBodyFromRequest = (req: http.IncomingMessage):Promise<Object> => {
   return new Promise((resolve, reject) => {
     let body = "";
+    // @ts-ignore
     req.on("data", (chunk) => {
       body += chunk.toString();
     });
