@@ -58,7 +58,7 @@ const notifyListeners = (res: Response) => {
   }
 };
 
-const checkUrl = (string): boolean => {
+const checkUrl = (string: string | URL): boolean => {
   try {
     new URL(string);
   } catch (error) {
@@ -68,7 +68,7 @@ const checkUrl = (string): boolean => {
   return true;
 };
 
-const getBodyFromRequest = (req) => {
+const getBodyFromRequest = (req: http.IncomingMessage):Promise<Object> => {
   return new Promise((resolve, reject) => {
     let body = "";
     req.on("data", (chunk) => {
