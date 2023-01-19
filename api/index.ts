@@ -1,6 +1,6 @@
 import http from "http";
 import { supabase } from "./_utils/supabaseClient";
-import fetch from "node-fetch";
+import fetch, { Response } from "node-fetch";
 
 // This is the main entry point of your API, i.e http://localhost:900/api
 const main = async (req: http.IncomingMessage, res: http.ServerResponse) => {
@@ -17,7 +17,7 @@ const main = async (req: http.IncomingMessage, res: http.ServerResponse) => {
       res.end("Invalid request body");
       return;
     }
-    const testUrl: Response = await fetch(body.url);
+    const testUrl  = await fetch(body.url);
     notifyListeners(testUrl);
     const { error } = await supabase
       .from("websites")
