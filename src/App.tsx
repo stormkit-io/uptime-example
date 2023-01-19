@@ -11,8 +11,8 @@ interface Website {
 
 function setupSupabase() {
   const env = process.env
-  const supabaseUrl = env.SUPABASE_URL || env.REACT_APP_SUPABASE_URL || "";
-  const supabaseKey = env.SUPABASE_KEY || env.REACT_APP_SUPABASE_KEY || "";
+  const supabaseUrl =  env.REACT_APP_SUPABASE_URL || "";
+  const supabaseKey =  env.REACT_APP_SUPABASE_KEY || "";
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   return supabase;
